@@ -3,10 +3,8 @@
     <div class="nav-bar">
       <div class="logo"></div>
       <div class="top-nav">
-        <el-menu :default-active="$route.matched[0].path" class="el-menu-demo" mode="horizontal" background-color="#3453a5" text-color="#ffffff" active-text-color="#d87813">
-          <router-link v-for="(route,index) in routes" :to="route.path" :key="index">
-            <el-menu-item :index="route.path" :key="route.name" :base-path="route.path" v-if="route.isFirst">{{route.meta.title}}</el-menu-item>
-          </router-link>
+        <el-menu :default-active="nowpath" class="el-menu-demo" mode="horizontal" router background-color="#3453a5" text-color="#ffffff" active-text-color="#d87813">
+          <el-menu-item v-for="route in routes" :index="route.path" :key="route.name" :base-path="route.path" v-if="route.isFirst">{{route.meta.title}}</el-menu-item>
         </el-menu>
       </div>
       <div class="info">
@@ -64,6 +62,15 @@ export default {
     }
   },
   computed: {
+    nowpath() {
+      var path = ''
+      if (this.$route.matched[0].path === '') {
+        path = '/'
+      } else {
+        path = this.$route.matched[0].path
+      }
+      return path
+    },
     isOpened() {
       return this.$store.state.app.sidebar.opened
     },

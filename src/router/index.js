@@ -43,6 +43,28 @@ export const constantRouterMap = [
     isFirst: true
   },
   {
+    path: '/knowSquare',
+    name: 'knowSquare',
+    component: Layout,
+    redirect: '/knowSquare/all',
+    meta: { title: '知识广场', index: 3, hasLeftBar: true },
+    isFirst: true,
+    children: [
+      {
+        path: 'all',
+        name: 'all',
+        component: () => import('@/views/konwSquare/index'),
+        meta: { title: '全部课程', icon: 'table', group: '数据' }
+      },
+      {
+        path: 'expert',
+        name: 'expert',
+        component: () => import('@/views/konwSquare/index'),
+        meta: { title: '专家堂', icon: 'tree' }
+      }
+    ]
+  },
+  {
     path: '/interactParty',
     name: 'interactParty',
     meta: { title: '互动社区', index: 4, hasLeftBar: true },
@@ -109,28 +131,6 @@ export const constantRouterMap = [
     meta: { title: '系统管理', index: 8, hasLeftBar: true },
     component: Layout,
     isFirst: true
-  },
-  {
-    path: '/knowSquare',
-    name: 'knowSquare',
-    component: Layout,
-    redirect: '/knowSquare/all',
-    meta: { title: '知识广场', index: 3, hasLeftBar: true },
-    isFirst: true,
-    children: [
-      {
-        path: 'all',
-        name: 'all',
-        component: () => import('@/views/konwSquare/index'),
-        meta: { title: '全部课程', icon: 'table', group: '数据' }
-      },
-      {
-        path: 'expert',
-        name: 'expert',
-        component: () => import('@/views/konwSquare/index'),
-        meta: { title: '专家堂', icon: 'tree' }
-      }
-    ]
   },
   {
     path: '/nested',
