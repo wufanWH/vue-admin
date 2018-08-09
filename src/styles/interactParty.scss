@@ -1,0 +1,198 @@
+.clearfix {
+  *zoom: 1;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tl {
+  text-align: left
+}
+.tr {
+  text-align: right;
+}
+.tc {
+  text-align: center;
+}
+.interact-party {
+  width: 1200px;
+  margin: auto;
+  margin-top: 16px;
+  .el-carousel{
+      img{
+          width: 100%;
+          height: 300px;
+      }
+  }
+  .img-banner-center{
+    img{
+        width: 100%;
+        height: 140px;
+    }
+    img:last-child{
+        margin-top: 16px;
+    }
+  }
+  .interact-content{
+      margin-top: 16px;
+      background-color: #ffffff;
+      width: 100%;
+      .topic-box{
+        padding: 16px;
+        .topic-ul-content{
+            margin: 0;
+            padding: 0;
+            li:hover{
+                cursor: pointer;
+                box-shadow: 0px 0px 6px 6px #e2e2e2e2;
+            }
+            li{
+                display: inline-block;
+                .content-left{
+                    margin-top: 18px;
+                    margin-left: 10px;
+                    width: 70px;
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 30px;
+                    }
+                }
+                .content-right{
+                    margin-top: 18px;
+                    width: 718px;
+                    padding-right: 12px;
+                    .topic-title{
+                        font-size: 20px;
+                        color: #666666;
+                    }
+                    .content{
+                        margin-top: 14px;
+                        font-size: 14px;
+                        color: #666666;
+                        line-height: 20px;
+                    }
+                    .last-right{
+                        display: inline-block;
+                        font-size: 12px;
+                        color: #999999;
+                        margin-bottom: 18px;
+                        i{
+                            font-size: 12px;
+                            margin-right: 12px;
+                        }
+                    }
+                    .bottom-span{
+                        font-size:12px;
+                        color: #999999;
+                        margin-right:12px;
+                    }
+                }
+            }
+        }
+        .el-pagination{
+            text-align: center;
+        }
+      }
+  }
+  .right-party{
+    margin-left: 16px;
+    .news-box{
+        padding: 16px;
+        background-color: rgb(79, 101, 143);
+        height: 300px;
+        color: #ffffff;
+        font-size: 14px;
+        span{
+            display: block;
+            margin-bottom: 20px;
+            padding-left: 16px;
+            font-size: 16px;
+            border-left: #ffffff 4px solid;
+        }
+        img{
+            width: 100%;
+            height: 150px;
+        }
+        .hot-question{
+            margin-top: 20px;
+            line-height: 20px;
+            p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .interact-user-info{
+      margin-top: 19px;
+      background-color: #ffffff;
+      padding: 16px;
+    .my-dynamic{
+        display: block;
+        margin-bottom: 20px;
+        padding-left: 16px;
+        font-size: 16px;
+        border-left: #5e80ca 4px solid;
+        color: #5e80ca;
+    }
+    ul{
+        padding: 0;
+        li{
+            text-align: center;
+            width: 95px;
+            display: inline-block;
+            span{
+                display: block;
+                color: #666666;
+            }
+        }
+    }
+  }
+  .hot-groups{
+    margin-top: 19px;
+    background-color: #ffffff;
+    padding: 16px;
+    .hot-grops-title{
+        display: inline-block;
+        padding-bottom: 16px;
+        font-size: 16px;
+        border-bottom: #5e80ca 2px solid;
+        color: #5e80ca;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        border-top: #f2f2f2 1px solid;
+        li{
+            margin-top: 18px;
+            display: inline-block;
+            width: 140px;
+            img{
+                width: 50px;
+                height: 50px;;
+            }
+            span{
+                width: 90px;
+                font-size: 14px;
+                padding-left: 6px;
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            span:last-child{
+                margin-top: 8px;
+                color: #5e80ca;
+                font-size: 12px;
+                i{
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+  }
+  }
+}
