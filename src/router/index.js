@@ -48,7 +48,7 @@ export const constantRouterMap = [
     isFirst: true,
     children: [
       {
-        path: 'all',
+        path: '',
         name: 'all',
         component: () => import('@/views/learningCenter/index'),
         meta: { title: '概况', icon: 'table' }
