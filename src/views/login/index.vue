@@ -169,9 +169,9 @@ export default {
       }
     }
     .is-remember {
-      margin-bottom: 5px;
+      margin-bottom: 5px !important;
       padding: 0 10%;
-      text-align: left;
+      text-align: left !important;
       .forget-password:hover{
         cursor: pointer;
       }
