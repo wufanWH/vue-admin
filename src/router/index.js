@@ -109,13 +109,13 @@ export const constantRouterMap = [
         path: 'all',
         name: 'all',
         component: () => import('@/views/konwSquare/index'),
-        meta: { title: '全部课程', icon: 'table', group: '数据' }
+        meta: { title: '全部知识', icon: 'table' }
       },
       {
         path: 'expert',
         name: 'expert',
         component: () => import('@/views/konwSquare/index'),
-        meta: { title: '专家堂', icon: 'tree' }
+        meta: { title: '讲师堂', icon: 'tree' }
       }
     ]
   },

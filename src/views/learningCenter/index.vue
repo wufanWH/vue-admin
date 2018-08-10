@@ -8,8 +8,10 @@
                         <el-button size="mini" type="primary" plain>本周</el-button>
                         <el-button size="mini">月</el-button>
                         <el-button size="mini">季度</el-button>
-                        <span><i class="learn-score"></i> 学分<i class="learn-time"></i> 学时</span>
-                        </el-button-group>
+                        <span>
+                            <i class="learn-score"></i> 学分
+                            <i class="learn-time"></i> 学时</span>
+                    </el-button-group>
                     <div id="learn-chart" class="learn-chart"></div>
                 </div>
             </el-col>
@@ -282,7 +284,7 @@ export default {
   methods: {
     drawLine() {
       // 基于准备好的dom，初始化echarts实例
-      let learnChart = this.$echarts.init(
+      const learnChart = this.$echarts.init(
         document.getElementById('learn-chart')
       )
       // 绘制图表
@@ -300,8 +302,8 @@ export default {
             boundaryGap: false,
             data: ['7/30', '7/31', '8/1', '8/2', '8/3', '8/4', '8/5'],
             splitLine: {
-            show: false
-        }
+              show: false
+            }
           }
         ],
         yAxis: [
@@ -311,8 +313,8 @@ export default {
               formatter: '{value}'
             },
             splitLine: {
-            show: false
-        }
+              show: false
+            }
           }
         ],
         series: [
@@ -320,10 +322,10 @@ export default {
             name: '学分',
             type: 'line',
             data: [25, 10, 5, 30, 15, 50, 45],
-            lineStyle:{
-                normal:{
-                    color:'#ee9632'
-                }
+            lineStyle: {
+              normal: {
+                color: '#ee9632'
+              }
             }
             // markPoint : {
             //     data : [
@@ -341,10 +343,10 @@ export default {
             name: '学时',
             type: 'line',
             data: [0, 5, 20, 10, 30, 20, 40],
-            lineStyle:{
-                normal:{
-                    color:'#6277e9'
-                }
+            lineStyle: {
+              normal: {
+                color: '#6277e9'
+              }
             }
             // markPoint : {
             //     data : [
@@ -393,33 +395,33 @@ export default {
         width: 100%;
         height: 220px;
       }
-      .el-button-group{
-          margin-bottom: -50px;
-          width: 100%;
-          padding: 0 16px;
-          span{
-              display: inline-block;
-              float: right;
-              font-size: 14px;
-              margin: 0 8px;
-              color: #999999;
-               i {
-                display: inline-block;
-                width: 6px;
-                height: 6px;
-                border-radius: 3px;
-                vertical-align: middle;
-                margin: 0 8px;
-             }
+      .el-button-group {
+        margin-bottom: -50px;
+        width: 100%;
+        padding: 0 16px;
+        span {
+          display: inline-block;
+          float: right;
+          font-size: 14px;
+          margin: 0 8px;
+          color: #999999;
+          i {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+            vertical-align: middle;
+            margin: 0 8px;
           }
-          .learn-score{
-              background-color: #ee9632;
-              border: #ee9632 3px solid;
-          }
-          .learn-time{
-              background-color: #6277e9;
-              border: #6277e9 3px solid;
-          }
+        }
+        .learn-score {
+          background-color: #ee9632;
+          border: #ee9632 3px solid;
+        }
+        .learn-time {
+          background-color: #6277e9;
+          border: #6277e9 3px solid;
+        }
       }
     }
     .top-box {
