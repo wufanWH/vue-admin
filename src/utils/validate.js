@@ -18,6 +18,12 @@ export function validateLowerCase(str) {
   const reg = /^[a-z]+$/
   return reg.test(str)
 }
+/* 邮箱或手机号*/
+export function validateEmailorPhone(str) {
+  const email = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/
+  const phone = /^[1][3,4,5,7,8][0-9]{9}$/
+  return email.test(str) || phone.test(str)
+}
 
 /* 大写字母*/
 export function validateUpperCase(str) {
