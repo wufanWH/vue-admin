@@ -27,20 +27,82 @@ export const constantRouterMap = [
     component: () => import('@/views/login/index'),
     hidden: true
   },
+  {
+    path: '/findPwd',
+    component: () => import('@/views/login/findPassword'),
+    hidden: true
+  },
   { path: '/404', component: () => import('@/views/404'), hidden: true },
   {
     path: '/',
     name: '/',
     meta: { title: '首页', index: 1, hasLeftBar: false },
     component: Layout,
-    isFirst: true
+    isFirst: true,
+    children: [
+      {
+        path: '/',
+        name: 'index',
+        component: () => import('@/views/index')
+      }
+    ]
   },
   {
     path: '/learning',
     name: 'learning',
     meta: { title: '学习中心', index: 2, hasLeftBar: true },
     component: Layout,
-    isFirst: true
+    isFirst: true,
+    children: [
+      {
+        path: '',
+        name: 'all',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '概况', icon: 'table' }
+      },
+      {
+        path: 'training',
+        name: 'training',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '培训计划', icon: 'business', group: '成长' }
+      },
+      {
+        path: 'skill',
+        name: 'skill',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '职位技能提升', icon: 'skillup' }
+      },
+      {
+        path: 'assessment',
+        name: 'assessment',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '考核室', icon: 'form' }
+      },
+      {
+        path: 'evaluation',
+        name: 'evaluation',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '测评室', icon: 'form' }
+      },
+      {
+        path: 'myProject',
+        name: 'myProject',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '我参与的项目', icon: 'nested', group: '我参与' }
+      },
+      {
+        path: 'myAssessment',
+        name: 'myAssessment',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '我参与的考核', icon: 'form' }
+      },
+      {
+        path: 'myEvaluation',
+        name: 'myEvaluation',
+        component: () => import('@/views/learningCenter/index'),
+        meta: { title: '我参与的测评', icon: 'form' }
+      }
+    ]
   },
   {
     path: '/knowSquare',
@@ -54,22 +116,29 @@ export const constantRouterMap = [
         path: 'all',
         name: 'all',
         component: () => import('@/views/konwSquare/index'),
-        meta: { title: '全部课程', icon: 'table', group: '数据' }
+        meta: { title: '全部知识', icon: 'table' }
       },
       {
         path: 'expert',
         name: 'expert',
         component: () => import('@/views/konwSquare/index'),
-        meta: { title: '专家堂', icon: 'tree' }
+        meta: { title: '讲师堂', icon: 'tree' }
       }
     ]
   },
   {
     path: '/interactParty',
     name: 'interactParty',
-    meta: { title: '互动社区', index: 4, hasLeftBar: true },
+    meta: { title: '互动社区', index: 4, hasLeftBar: false },
     component: Layout,
-    isFirst: true
+    isFirst: true,
+    children: [
+      {
+        path: '/',
+        name: 'index',
+        component: () => import('@/views/interactParty/index')
+      }
+    ]
   },
   {
     path: '/web',
