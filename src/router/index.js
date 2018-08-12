@@ -38,7 +38,14 @@ export const constantRouterMap = [
     name: '/',
     meta: { title: '首页', index: 1, hasLeftBar: false },
     component: Layout,
-    isFirst: true
+    isFirst: true,
+    children: [
+      {
+        path: '/',
+        name: 'index',
+        component: () => import('@/views/index')
+      }
+    ]
   },
   {
     path: '/learning',
