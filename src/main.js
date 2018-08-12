@@ -14,9 +14,6 @@ import store from './store'
 
 import '@/icons' // icon
 import '@/permission' // permission control
-import echarts from 'echarts'
-
-Vue.prototype.$echarts = echarts
 
 // 引入echarts
 import echarts from 'echarts'
