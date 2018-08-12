@@ -177,6 +177,54 @@ export const constantRouterMap = [
         name: 'expert',
         component: () => import('@/views/web/index'),
         meta: { title: '专家管理', icon: 'tree' }
+      },
+      {
+        path: 'recommend',
+        name: 'recommend',
+        component: () => import('@/views/web/index'),
+        meta: { title: '推荐管理', icon: 'tree', group: '社区' }
+      },
+      {
+        path: 'group',
+        name: 'group',
+        component: () => import('@/views/web/index'),
+        meta: { title: '小组管理', icon: 'tree' }
+      },
+      {
+        path: 'theme',
+        name: 'theme',
+        component: () => import('@/views/web/index'),
+        meta: { title: '话题管理', icon: 'tree' }
+      },
+      {
+        path: 'integral',
+        name: 'integral',
+        component: () => import('@/views/web/index'),
+        meta: { title: '积分管理', icon: 'tree', group: '积分' }
+      },
+      {
+        path: 'reward',
+        name: 'reward',
+        component: () => import('@/views/web/index'),
+        meta: { title: '奖品管理', icon: 'tree' }
+      },
+      {
+        path: 'exchange',
+        name: 'exchange',
+        component: () => import('@/views/web/index'),
+        meta: { title: '兑换订单', icon: 'tree' }
+      },
+      {
+        path: 'rankTitle',
+        name: 'rankTitle',
+        component: () => import('@/views/web/index'),
+        meta: { title: '等级头衔设置', icon: 'tree' }
+      },
+      {
+        path: 'integralRule',
+        name: 'integralRule',
+        component: () => import('@/views/web/index'),
+        meta: { title: '积分规则设置', icon: 'example' }
       }
     ]
   },
@@ -185,21 +233,186 @@ export const constantRouterMap = [
     name: 'project',
     meta: { title: '项目管理', index: 6, hasLeftBar: true },
     component: Layout,
-    isFirst: true
+    isFirst: true,
+    redirect: '/project/index',
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('@/views/project/index'),
+        meta: { title: '在线学习', icon: 'table', group: '项目' }
+      },
+      {
+        path: 'offline',
+        name: 'offline',
+        component: () => import('@/views/project/index'),
+        meta: { title: '线下培训', icon: 'table' }
+      },
+      {
+        path: 'mixing',
+        name: 'mixing',
+        component: () => import('@/views/project/index'),
+        meta: { title: '混合式培训', icon: 'table' }
+      },
+      {
+        path: 'projectDisplay',
+        name: 'projectDisplay',
+        component: () => import('@/views/project/index'),
+        meta: { title: '项目展示', icon: 'table' }
+      },
+      {
+        path: 'arrangementExam',
+        name: 'arrangementExam',
+        component: () => import('@/views/project/index'),
+        meta: { title: '安排考试', icon: 'table', group: '考试' }
+      },
+      {
+        path: 'review',
+        name: 'review',
+        component: () => import('@/views/project/index'),
+        meta: { title: '批阅中心', icon: 'table' }
+      },
+      {
+        path: 'arrangeEvaluation',
+        name: 'arrangeEvaluation',
+        component: () => import('@/views/project/index'),
+        meta: { title: '安排测评', icon: 'table', group: '测评' }
+      },
+      {
+        path: 'examinationFile',
+        name: 'examinationFile',
+        component: () => import('@/views/project/index'),
+        meta: { title: '考试档案', icon: 'table', group: '档案' }
+      },
+      {
+        path: 'employeeProfile',
+        name: 'employeeProfile',
+        component: () => import('@/views/project/index'),
+        meta: { title: '员工档案', icon: 'table' }
+      }
+    ]
   },
   {
     path: '/resource',
     name: 'resource',
     meta: { title: '资源管理', index: 7, hasLeftBar: true },
     component: Layout,
-    isFirst: true
+    redirect: '/resource/index',
+    isFirst: true,
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '知识分类', icon: 'table' }
+      },
+      {
+        path: 'knowledgeBase',
+        name: 'knowledgeBase',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '知识库', icon: 'table' }
+      },
+      {
+        path: 'knowledgeTag',
+        name: 'knowledgeTag',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '知识标签', icon: 'table' }
+      },
+      {
+        path: 'testPaper',
+        name: 'testPaper',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '试卷库', icon: 'table' }
+      },
+      {
+        path: 'evaluationLibrary',
+        name: 'evaluationLibrary',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '测评库', icon: 'table' }
+      },
+      {
+        path: 'professional',
+        name: 'professional',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '职业技能设置', icon: 'table' }
+      },
+      {
+        path: 'lecturer ',
+        name: 'lecturer',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '讲师管理', icon: 'table' }
+      },
+      {
+        path: 'recommend',
+        name: 'recommend',
+        component: () => import('@/views/resource/index'),
+        meta: { title: '推荐展示', icon: 'table' }
+      }
+    ]
   },
   {
     path: '/system',
     name: 'system',
     meta: { title: '系统管理', index: 8, hasLeftBar: true },
     component: Layout,
-    isFirst: true
+    redirect: '/system/index',
+    isFirst: true,
+    children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('@/views/system/index'),
+        meta: { title: '组织架构', icon: 'table' }
+      },
+      {
+        path: 'memberManagement',
+        name: 'memberManagement',
+        component: () => import('@/views/system/index'),
+        meta: { title: '成员管理', icon: 'table' }
+      },
+      {
+        path: 'positionManagement',
+        name: 'positionManagement',
+        component: () => import('@/views/system/index'),
+        meta: { title: '职位管理', icon: 'table' }
+      },
+      {
+        path: 'rolePermissions',
+        name: 'rolePermissions',
+        component: () => import('@/views/system/index'),
+        meta: { title: '角色权限', icon: 'table' }
+      },
+      {
+        path: 'userGroup',
+        name: 'userGroup',
+        component: () => import('@/views/system/index'),
+        meta: { title: '用户组管理', icon: 'table' }
+      },
+      {
+        path: 'creditSetting',
+        name: 'creditSetting',
+        component: () => import('@/views/system/index'),
+        meta: { title: '学分设置', icon: 'table' }
+      },
+      {
+        path: 'moduleControl',
+        name: 'moduleControl',
+        component: () => import('@/views/system/index'),
+        meta: { title: '首页模块控制', icon: 'table' }
+      },
+      {
+        path: 'bannerSet',
+        name: 'bannerSet',
+        component: () => import('@/views/system/index'),
+        meta: { title: '网站banner设置', icon: 'table' }
+      },
+      {
+        path: 'popWindow',
+        name: 'popWindow',
+        component: () => import('@/views/system/index'),
+        meta: { title: '弹窗设置', icon: 'table' }
+      }
+    ]
   },
   {
     path: '/nested',
