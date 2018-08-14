@@ -132,14 +132,16 @@ export default {
 </script>
 <style rel="stylesheet/scss" lang="scss">
 .project-container {
+  // background-color: white;
   width: 1200px;
   .title-style {
+    background-color: white;
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
     text-align: center;
     .button-postion {
       text-align: right;
-      margin-bottom: -40px;
+      margin-bottom: -30px;
       margin-right: 30px;
     }
     .el-table th div,

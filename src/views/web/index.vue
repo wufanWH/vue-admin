@@ -344,14 +344,17 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss">
 .web-container {
+  // background-color: white;
   width: 1200px;
   //   background-color: #a2a2a2;
   .first-table {
+    // background-color: white;
     margin-top: 30px;
     > ul {
       width: 100%;
       text-align: left;
       > li {
+        background-color: white;
         display: inline-block;
         border: solid 1px #a2a2a2;
         margin-right: 20px;
@@ -363,6 +366,7 @@ export default {
     > ul {
       width: 100%;
       > li {
+        background-color: white;
         display: inline-block;
         border: solid 1px #a2a2a2;
         margin-right: 20px;
@@ -396,6 +400,7 @@ export default {
     > ul {
       width: 100%;
       > li {
+        background-color: white;
         width: 1075px;
         height: 500px;
         display: inline-block;

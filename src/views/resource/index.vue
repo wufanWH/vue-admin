@@ -108,8 +108,10 @@ export default {
   width: 1200px;
   .menu-left {
     margin-top: 30px;
+    background-color: white;
   }
   .main-menu {
+    background-color: white;
     margin-left: 30px;
     margin-top: 30px;
     .el-table th div,
