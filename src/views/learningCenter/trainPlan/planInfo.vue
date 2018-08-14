@@ -1,7 +1,7 @@
 <template>
     <div class="plan-Info">
         <el-row class="plan-top">
-            <el-col :span="2" class="text-center back">
+            <el-col :span="2" class="text-center back" @click.native="back()">
                 <i class="el-icon-arrow-left c-gray"></i>
                 <span>返回</span>
             </el-col>
@@ -126,7 +126,16 @@
     </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    back() {
+      this.$router.push({ path: '/learning/training' })
+    }
+  }
+}
 </script>
 <style lang="scss">
 .plan-Info {
@@ -264,8 +273,8 @@ export default {}
     .icon-benshubook119 {
       color: #46a310;
     }
-    .el-icon-edit-outline{
-        color: #f1db14;
+    .el-icon-edit-outline {
+      color: #f1db14;
     }
   }
 }

@@ -68,7 +68,7 @@ export const constantRouterMap = [
           {
             path: '',
             name: 'training',
-            component: () => import('@/views/learningCenter/trainPlan/index'),
+            component: () => import('@/views/learningCenter/trainPlan/training'),
             meta: { title: '培训计划' }
           },
           {

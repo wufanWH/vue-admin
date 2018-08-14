@@ -60,7 +60,7 @@
               </ul>
             </div>
             <div class="main-center">
-              <el-table ref="multipleTable" :data="tableData3" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
+              <el-table ref="multipleTable" :data="tableData3" tooltip-effect="dark" style="width: 100%">
                 <el-table-column type="selection" width="55">
                 </el-table-column>
                 <el-table-column prop="name" label="姓名">
@@ -99,6 +99,7 @@ export default {
     return {
       activeName: '哈哈',
       checked: true,
+      input23: '',
       options: [
         {
           value: '1',
@@ -253,10 +254,14 @@ export default {
 <style rel="stylesheet/scss" lang="scss">
 .system-container {
   width: 1200px;
+  .el-col {
+    // background-color: white;
+  }
   .menu-left {
     margin-top: 30px;
   }
   .main-menu {
+    background-color: white;
     margin-left: 30px;
     margin-top: 30px;
     .title-all {
