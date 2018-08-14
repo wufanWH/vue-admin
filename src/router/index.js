@@ -35,7 +35,6 @@ export const constantRouterMap = [
   { path: '/404', component: () => import('@/views/404'), hidden: true },
   {
     path: '/',
-    name: '/',
     meta: { title: '首页', index: 1, hasLeftBar: false },
     component: Layout,
     isFirst: true,
@@ -50,21 +49,35 @@ export const constantRouterMap = [
   {
     path: '/learning',
     name: 'learning',
+    redirect: '/learning/all',
     meta: { title: '学习中心', index: 2, hasLeftBar: true },
     component: Layout,
     isFirst: true,
     children: [
       {
-        path: '',
+        path: 'all',
         name: 'all',
         component: () => import('@/views/learningCenter/index'),
         meta: { title: '概况', icon: 'table' }
       },
       {
         path: 'training',
-        name: 'training',
-        component: () => import('@/views/learningCenter/training'),
-        meta: { title: '培训计划', icon: 'business', group: '成长' }
+        component: () => import('@/views/learningCenter/trainPlan/index'),
+        meta: { title: '培训计划', icon: 'business', group: '成长' },
+        children: [
+          {
+            path: '',
+            name: 'training',
+            component: () => import('@/views/learningCenter/trainPlan/training'),
+            meta: { title: '培训计划' }
+          },
+          {
+            path: 'planInfo',
+            name: 'planInfo',
+            component: () => import('@/views/learningCenter/trainPlan/planInfo'),
+            meta: { title: '计划详情' }
+          }
+        ]
       },
       {
         path: 'skill',
@@ -128,14 +141,13 @@ export const constantRouterMap = [
   },
   {
     path: '/interactParty',
-    name: 'interactParty',
     meta: { title: '互动社区', index: 4, hasLeftBar: false },
     component: Layout,
     isFirst: true,
     children: [
       {
         path: '/',
-        name: 'index',
+        name: 'interactParty',
         component: () => import('@/views/interactParty/index')
       }
     ]

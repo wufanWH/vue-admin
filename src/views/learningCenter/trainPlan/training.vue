@@ -30,7 +30,7 @@
             <el-row>
                 <el-col :span="14">
                     <div class="plan-img">
-                        <img src="../../assets/404_images/img_loading.png" width="120px;" height="80px;">
+                        <img src="../../../assets/404_images/img_loading.png" width="120px;" height="80px;">
                     </div>
                     <div class="plan-title">
                         <div class="little-title">
@@ -51,13 +51,13 @@
                     进行中
                 </el-col>
                 <el-col :span="3" class="main-all">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="nextPage()">查看详情</el-button>
                 </el-col>
             </el-row><hr>
             <el-row>
                 <el-col :span="14">
                     <div class="plan-img">
-                        <img src="../../assets/404_images/img_loading.png" width="120px;" height="80px;">
+                        <img src="../../../assets/404_images/img_loading.png" width="120px;" height="80px;">
                     </div>
                     <div class="plan-title">
                         <div class="little-title">
@@ -78,13 +78,13 @@
                     进行中
                 </el-col>
                 <el-col :span="3" class="main-all">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="nextPage()">查看详情</el-button>
                 </el-col>
             </el-row><hr>
             <el-row>
                 <el-col :span="14">
                     <div class="plan-img">
-                        <img src="../../assets/404_images/img_loading.png" width="120px;" height="80px;">
+                        <img src="../../../assets/404_images/img_loading.png" width="120px;" height="80px;">
                     </div>
                     <div class="plan-title">
                         <div class="little-title">
@@ -92,7 +92,6 @@
                         </div>
                         <div class="main-show">培训目标：让你在游戏中了解情商，6秒钟练就高情商，4小时玩转领导力，提升自身领导力</div>
                         <div class="main-show">645人参加培训</div>
-
                     </div>
                 </el-col>
                 <el-col :span="3" class="main-all">
@@ -105,14 +104,23 @@
                     进行中
                 </el-col>
                 <el-col :span="3" class="main-all">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="nextPage()">查看详情</el-button>
                 </el-col>
             </el-row><hr>
         </div>
     </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    nextPage() {
+      this.$router.push({ path: '/learning/training/planInfo' })
+    }
+  }
+}
 </script>
 <style lang="scss" >
 .training-container {

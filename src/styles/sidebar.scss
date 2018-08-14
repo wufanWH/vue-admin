@@ -4,6 +4,9 @@
     height: 61px;
     background-color: #3453a5;
     min-width: 1160px;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
     > div {
       float: left;
     }
@@ -118,6 +121,8 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
+    position: fixed;
+    top: 61px;
     //reset element-ui css
     .horizontal-collapse-transition {
       transition: 0s width ease-in-out, 0s padding-left ease-in-out,
