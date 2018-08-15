@@ -97,7 +97,6 @@
         <div class="menu">
           <div class="menu-item">
             <span class="menu-title">学习</span>
-            <span>我的培训（0）</span>
             <span>我的笔记（0）</span>
             <span>学习知识（0）</span>
           </div>
@@ -279,7 +278,7 @@ export default {
       font-size: 12px;
       color: #3c6bec;
     }
-    .login-out{
+    .login-out {
       cursor: pointer;
     }
     p {
