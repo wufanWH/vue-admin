@@ -6,8 +6,8 @@
             <li>混合培训</li>
         </ul>
         <ul class="status-tab">
-            <li>进行中</li>
-            <li>已结束</li>
+            <li>未参与</li>
+            <li>已参与</li>
         </ul>
         <div class="main-content">
             <el-row class="main-title">
@@ -48,7 +48,7 @@
                     在线学习
                 </el-col>
                 <el-col :span="2" class="main-all">
-                    进行中
+                    未参与
                 </el-col>
                 <el-col :span="3" class="main-all">
                     <el-button type="primary" @click="nextPage()">查看详情</el-button>
@@ -75,7 +75,7 @@
                     在线学习
                 </el-col>
                 <el-col :span="2" class="main-all">
-                    进行中
+                    未参与
                 </el-col>
                 <el-col :span="3" class="main-all">
                     <el-button type="primary" @click="nextPage()">查看详情</el-button>
@@ -101,7 +101,7 @@
                     在线学习
                 </el-col>
                 <el-col :span="2" class="main-all">
-                    进行中
+                    未参与
                 </el-col>
                 <el-col :span="3" class="main-all">
                     <el-button type="primary" @click="nextPage()">查看详情</el-button>
