@@ -9,7 +9,7 @@
 ``` bash
 
 # Clone project
-git clone https://github.com/PanJiaChen/vueAdmin-template.git
+git clone https://github.com/wufanWH/vue-admin.git
 
 # Install dependencies
 npm install
